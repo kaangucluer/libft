@@ -6,21 +6,20 @@
 /*   By: kgucluer <kgucluer@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 13:25:58 by kgucluer          #+#    #+#             */
-/*   Updated: 2023/07/05 13:29:08 by kgucluer         ###   ########.fr       */
+/*   Updated: 2023/07/05 16:01:53 by kgucluer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int     ft_strlen(const char *str){
+int	ft_strlen(const char *str)
+{
+	int i;
 
-    int i;
-
-    i = 0;
-    while (str[i])
-    {
-        i++;
-    }
-    return (i);
-    
+	i = 0;
+	while (str[i])
+	{
+		i++;
+	}
+	return (i);
 }
