@@ -6,7 +6,7 @@
 /*   By: kgucluer <kgucluer@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 15:25:21 by kgucluer          #+#    #+#             */
-/*   Updated: 2023/07/05 15:31:51 by kgucluer         ###   ########.fr       */
+/*   Updated: 2023/07/06 15:54:21 by kgucluer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 int     ft_toupper(int k)
 {
     if('a' <= k && k <= 'z')
-        return(k - 32)
+        return(k - 32);
     return (k);
 }

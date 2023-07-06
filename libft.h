@@ -6,7 +6,7 @@
 /*   By: kgucluer <kgucluer@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 15:49:33 by kgucluer          #+#    #+#             */
-/*   Updated: 2023/07/05 16:44:46 by kgucluer         ###   ########.fr       */
+/*   Updated: 2023/07/06 14:05:38 by kgucluer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <stdlib.h>
 #include <unistd.h>
+
 typedef struct s_list
 {
     void    *content;
