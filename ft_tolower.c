@@ -6,15 +6,15 @@
 /*   By: kgucluer <kgucluer@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 15:32:03 by kgucluer          #+#    #+#             */
-/*   Updated: 2023/07/06 11:29:06 by kgucluer         ###   ########.fr       */
+/*   Updated: 2023/07/09 16:18:51 by kgucluer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int     ft_tolower(int k)
+int	ft_tolower(int k)
 {
-    if('A' <= k && k <= 'Z')
-        return(k + 32);
-    return(k);
+	if ('A' <= k && k <= 'Z')
+		return (k + 32);
+	return (k);
 }

@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kgucluer <kgucluer@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/05 13:23:50 by kgucluer          #+#    #+#             */
-/*   Updated: 2023/07/09 16:15:20 by kgucluer         ###   ########.fr       */
+/*   Created: 2023/07/07 11:20:28 by kgucluer          #+#    #+#             */
+/*   Updated: 2023/07/09 16:19:18 by kgucluer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int k)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	if (32 <= k && k <= 126)
-		return (1);
-	return (0);
+	char	*new;
+	size_t	first;
+	size_t	total;
+
+	first = ft_strlen(s1) + 1;
+	total = ft_strlen(s2) + first;
+	new = (char *)malloc(total * sizeof(char));
+	if (!new)
+		return (NULL);
+	ft_strlcpy(new, s1, first);
+	ft_strlcat(new, s2, total);
+	return (new);
 }

@@ -1,25 +1,57 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kgucluer <kgucluer@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/05 13:25:58 by kgucluer          #+#    #+#             */
-/*   Updated: 2023/07/09 16:20:01 by kgucluer         ###   ########.fr       */
+/*   Created: 2023/07/07 17:01:58 by kgucluer          #+#    #+#             */
+/*   Updated: 2023/07/09 16:15:30 by kgucluer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+static int	ft_numlen(int num)
 {
 	int	i;
 
+	if (num == 0)
+		return (1);
 	i = 0;
-	while (str[i])
+	while (num > 0 || num < 0)
 	{
+		num /= 10;
 		i++;
 	}
 	return (i);
+}
+
+char	*ft_itoa(int n)
+{
+	int		len;
+	char	*dizi;
+	long	nbr;
+
+	nbr = n;
+	len = ft_numlen(nbr);
+	if (n < 0)
+	{
+		len++;
+		nbr = -nbr;
+	}
+	dizi = malloc(sizeof(char) * len + 1);
+	if (!dizi)
+		return (NULL);
+	dizi[len] = '\0';
+	while (nbr > 0)
+	{
+		dizi[--len] = nbr % 10 + 48;
+		nbr /= 10;
+	}
+	if (n < 0)
+		dizi[0] = '-';
+	if (n == 0)
+		dizi[0] = '0';
+	return (dizi);
 }

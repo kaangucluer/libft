@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kgucluer <kgucluer@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/05 13:23:50 by kgucluer          #+#    #+#             */
-/*   Updated: 2023/07/09 16:15:20 by kgucluer         ###   ########.fr       */
+/*   Created: 2023/07/07 17:05:02 by kgucluer          #+#    #+#             */
+/*   Updated: 2023/07/09 16:17:17 by kgucluer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int k)
+void	ft_putstr_fd(char const *s, int fd)
 {
-	if (32 <= k && k <= 126)
-		return (1);
-	return (0);
+	if (!s)
+		return ;
+	else
+		write (fd, s, ft_strlen(s));
 }
