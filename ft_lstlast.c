@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kgucluer <kgucluer@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/07 17:05:02 by kgucluer          #+#    #+#             */
-/*   Updated: 2023/07/10 14:42:37 by kgucluer         ###   ########.fr       */
+/*   Created: 2023/07/10 13:07:58 by kgucluer          #+#    #+#             */
+/*   Updated: 2023/07/10 13:20:10 by kgucluer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+t_list	*ft_lstlast(t_list *lst)
 {
-	if (!s)
-		return ;
-	else
-		write (fd, s, ft_strlen(s));
+	if (lst == NULL)
+		return (0);
+	while (lst -> next != NULL)
+		lst = lst -> next;
+	return (lst);
 }
